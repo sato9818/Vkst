@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ほっとひといき敬語塾</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <div class = "container">
+        <div class = "row">
+          <div class = "col-xs-6">
+            <%= link_to root_path do %>
+              <%= image_tag "Vkst.png", class: "title-img" %>
+            <% end %>
+            <p class = "title" style = "color: #c0c0c0;">ちょっと役に立つ敬語サイト</p>
+          </div>
+
+          <div class = "col-xs-6">
+            <nav>
+              <ul class = "nav nav-pills nav-justified">
+                <li role="presentation" class="nav-item"><%= link_to "ホーム", root_path %></li>
+                <li role="presentation" class="nav-item"><%= link_to "敬語検索", searches_path %></li>
+                <li role="presentation" class="nav-item"><%= link_to "メール定型文", phrases_path %></li>
+                <li role="presentation" class="nav-item"><%= link_to "関連サイト", exlink_path %></li>
+              </ul>
+            </nav>
+          </div>
+
+    </header>
+
+    <main>
+      <div class = "container">
+        <%= yield %>
+      </div>
+    </main>
+
+    <footer>
+      <div class = "container">
+        <div class = "row">
+          <div class = "col-xs-9">
+          </div>
+          <div class = "col-xs-3">
+            <p class = "creater" style = "color: black; font-size: 1.5rem;">created by S.Sawa, K.Sato, T.Yagi</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
