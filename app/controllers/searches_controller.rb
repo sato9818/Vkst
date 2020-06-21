@@ -1,5 +1,6 @@
 class SearchesController < ApplicationController
 	def top
+		@test = Verb.find_by(id: "1")
 	end
 
 	def index
@@ -7,6 +8,7 @@ class SearchesController < ApplicationController
 
 	def exlink
 	end
+	private
 
 
 end
