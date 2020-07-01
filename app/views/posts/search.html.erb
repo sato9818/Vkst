@@ -1,0 +1,9 @@
+<%= render "searches/index", search_content: @search_content %><br>
+
+<div class = "row">
+	<div class = col-xs-9>
+		<% @posts.each do |post| %>
+			<%= post.verb %>
+		<% end %>
+	</div>
+</div>

@@ -6,9 +6,4 @@ class SearchesController < ApplicationController
 	def index
 	end
 
-	def exlink
-	end
-	private
-
-
 end
